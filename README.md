@@ -14,7 +14,7 @@ A fresh, _modern_ & lightweight HTML5 game engine
 -------------------------------------------------------------------------------
 ![melonJS](https://melonjs.org/img/alex4-github.png)
 
-melonJS 2 is a modern version of the melonJS game engine that was first released in 2011. It has been rebuilt entirely using ES6 class, inheritance and semantic, and bundled using Rollup to provide modern features such as transpiling and tree-shaking.
+melonJS 2 is a modern version of the melonJS game engine that was first released in 2011. It has been rebuilt entirely using ES6 class, inheritance and semantic, and bundled using [esbuild](https://esbuild.github.io) for blazing fast build performance and provide modern features such as tree-shaking.
 
 >Note: migrating an existing project to melonJS 2 (version 10.0 and higher) will definitely break your game (ES6 semantic and inheritance, nodeJS event emitter, and no backward compatibility with deprecated legacy APIs), and you might want to read first this small step by step guide on [upgrading to melonJS 2](https://github.com/melonjs/melonJS/wiki/Upgrading-to-melonJS-2). If you are looking at the legacy version (9.x and lower) of melonJS, you can find it [here](https://github.com/melonjs/melonJS/tree/legacy) under the _legacy_ branch.
 
@@ -151,11 +151,7 @@ me.device.onReady(function () {
 Documentation
 -------------------------------------------------------------------------------
 
-* [Online API](http://melonjs.github.io/melonJS/docs/)
-
-To enable an offline version of the documentation, navigate to the settings page and enable `offline storage`:
-<img width="297" alt="186643536-854af31e-9c94-412e-a764-4bb7f93f15c3" src="https://user-images.githubusercontent.com/4033090/187061867-cf8c4c8a-437b-4f76-9138-610adda0ca23.png">
-
+* [Online API](http://melonjs.github.io/melonJS/)
 
 Plugins
 -------------------------------------------------------------------------------
@@ -177,9 +173,8 @@ melonJS 2 now only provides an ES6 Bundle :
 
 | build               | description |
 | ------------------- | ----------- |
-| `melonjs.module.js` | the ES6 Module (ESM) Bundle |
-| `melonjs.mjs` | a tree-shakeable ES6 Module Directory |
-| `types/index.d.ts` | typescript declaration files for the ES6 Module (ESM) Bundle |
+| `index.js` | a tree-shakeable ES6 Module Directory |
+| `index.d.ts` | typescript declaration files |
 
 >Note: if you need your application to be compatible with ES5, refer to our [boilerplate](#using-melonjs) that provides automatic transpiling to ES5.
 
